@@ -1,0 +1,76 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f4f4 60%, #e0e7ff 100%);
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background: linear-gradient(90deg, #2c3e50 70%, #2980b9 100%);
+    color: white;
+    text-align: center;
+    padding: 32px 0 16px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.12);
+    margin-bottom: 24px;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    margin: 0 0 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 2px 8px #2226;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 14px;
+    font-size: 1.1rem;
+    padding: 6px 12px 4px;
+    border-radius: 6px 6px 0 0;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+    background: #22313a;
+    border-bottom: 2px solid #ffd700;
+    box-shadow: 0 2px 8px #ffd70044;
+}
+
+/* --- Konten utama --- */
+main {
+    background: white;
+    max-width: 800px;
+    margin: 0 auto 24px;
+    padding: 32px 24px;
+    border-radius: 16px;
+    border: 1px solid #e0e7ff;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
+}
+
+section {
+    margin-bottom: 32px;
+    padding: 16px 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    border-left: 5px solid #2980b9;
+    padding-left: 12px;
+    font-weight: 600;
+}
+
+p, li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+ul {
+    padding-left: 24px;
+    margin-top: 8
