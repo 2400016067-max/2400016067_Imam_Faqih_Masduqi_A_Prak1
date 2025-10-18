@@ -1,0 +1,131 @@
+/* --- GRID LAYOUT UTAMA --- */
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f4f4 60%, #e0e7ff 100%);
+}
+
+/* --- HEADER DENGAN FLEXBOX --- */
+header {
+  grid-area: header;
+  background: #2c3e50;
+  color: white;
+  padding: 16px 32px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Use gap for spacing between nav links and improve focus styles for accessibility */
+.nav-container nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 4px 6px; /* small hit area */
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Accessible keyboard focus for navigation links */
+nav a:focus {
+  outline: 2px dashed #ffd700;
+  outline-offset: 3px;
+}
+
+/* --- MAIN AREA (GRID 2 KOLOM) --- */
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  padding: 24px 32px;
+}
+
+.sidebar {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.content {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- FLEXBOX UNTUK KARTU HOBI --- */
+.hobi-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.hobi-card {
+  background: #2980b9;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  flex: 1 1 150px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.hobi-card:hover {
+  background: #1f6696;
+  transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+footer {
+  grid-area: footer;
+  text-align: center;
+  background: #2c3e50;
+  color: white;
+  padding: 16px 0;
+  font-size: 0.9rem;
+}
+
+/* --- MEDIA QUERY (RESPONSIF) --- */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .hobi-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Make nav links easier to tap on mobile */
+  .nav-container nav { margin-top: 8px; }
+  .nav-container nav a { display: block; margin: 8px 0; padding: 10px 12px; }
+}
