@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="24" fill="url(#g1)" opacity="0.08" />
+  <!-- rocket -->
+  <g transform="translate(220,90)">
+    <ellipse cx="150" cy="380" rx="110" ry="18" fill="#E6EDF7" opacity="0.8" />
+    <g transform="translate(80,40)">
+      <path d="M110 10c15 0 27 12 27 27v40c0 15-12 27-27 27H80c-15 0-27-12-27-27V37c0-15 12-27 27-27h30z" fill="#fff" stroke="#E6EEF9" stroke-width="2" />
+      <path d="M125 35c0 8-6.5 15-14.5 15S96 43 96 35s6.5-15 14.5-15S125 27 125 35z" fill="#60A5FA" />
+      <path d="M80 110c10 12 40 20 60 20s50-8 60-20" stroke="#FDE68A" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <g transform="translate(-40,140)">
+        <path d="M30 50c10 40 60 40 80 0" stroke="#FB7185" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      </g>
+    </g>
+  </g>
+  <text x="30" y="560" font-family="Inter, Arial" font-size="14" fill="#1F2937" opacity="0.6">Hero illustration placeholder — replace with exported Figma asset for final submission</text>
+</svg>

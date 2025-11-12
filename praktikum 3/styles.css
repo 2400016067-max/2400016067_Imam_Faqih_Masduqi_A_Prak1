@@ -17,7 +17,7 @@ input[type="text"] {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
-    box-sizing: border-box;
+    box-sizing: 1px solid #ccc;
 }
 
 #taskList {
@@ -38,3 +38,16 @@ input[type="text"] {
     float: right;
     cursor: pointer;
 }
+
+@media (max-width: 400px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .container h2 {
+        font-size: 1.5em;
+    }
+    .close {
+        font-size: 1.2em;
+    }
+}   
