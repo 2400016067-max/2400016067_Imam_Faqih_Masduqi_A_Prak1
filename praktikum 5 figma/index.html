@@ -1,197 +1,115 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Landing Page - Praktikum 5</title>
-		<!-- Tailwind CSS via CDN (required) -->
-		<script src="https://cdn.tailwindcss.com"></script>
-	</head>
-	<body class="antialiased text-gray-800 bg-white">
-		<!-- Header / Nav -->
-		<header class="bg-white border-b border-gray-200">
-			<div class="max-w-6xl mx-auto px-4 sm:px-6">
-				<div class="flex justify-between items-center py-6">
-					<a href="#" class="flex items-center">
-						<img src="assets/icons/logo appolo.svg" alt="APOLLO" class="h-9 w-auto" />
-					</a>
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Imam faqih masduqi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  
+  <body class="font-sans bg-gray-50 text-gray-800">
+    <header class="fixed top-0 left-0 w-full bg-white border-b shadow z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">My Portfolio</h1>
+        <nav class="space-x-4" aria-label="Navigasi utama">
+          <a href="#about" class="text-gray-600 hover:text-blue-600">Home</a>
+          <a href="#projects" class="text-gray-600 hover:text-blue-600">Projects</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-					
-					<nav class="hidden md:flex items-center space-x-6 text-sm">
-						<a href="#" class="text-gray-600 hover:text-sky-600">Home</a>
-						<a href="#features" class="text-gray-600 hover:text-sky-600">Features</a>
-						<a href="#contact" class="text-gray-600 hover:text-sky-600">Contact</a>
-						<div class="ml-6 flex items-center space-x-3">
-							<a href="#" class="px-4 py-2 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50">Sign in</a>
-							<a href="#" class="inline-flex items-center px-4 py-2 bg-sky-600 text-white text-sm font-semibold rounded-full hover:bg-sky-700">Sign up</a>
-						</div>
-					</nav>
+    <main>
+      <section id="about" class="bg-white pt-28 py-16 px-6 max-w-4xl mx-auto">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          <img src="assets/image/foto_profil.jpg" 
+          alt="Profil imam faqih masduqi" class="w-48 h-48 md:w-64 md:h-64 rounded-full 
+          object-cover shadow-md" />
+          <div class="max-w-2x1">
+            <h2 class="text-5x2 font-bold mb-8">Halo, Saya imam faqih masduqi</h2>
+            <p class="text-gray-600 leading-relaxed">
+              saya adalah seorang mahasiswa di universitas ahmad dahlan yogyakarta,
+              saya sedang menempuh pendidikan di jurusan sistem informasi.
+            </p>
+          </div>
+        </div>
+      </section>
 
-					<!-- Mobile hamburger -->
-					<div class="md:hidden">
-						<button id="menu-btn" aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none">
-							<svg id="menu-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-							</svg>
-							<svg id="menu-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-							</svg>
-						</button>
-					</div>
-				</div>
-			</div>
+      <section id="projects" class="py-16 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-2xl font-bold text-center mb-10">Project Saya</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <article class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+              <img src="assets/image/proyek 1.png" alt="E-Commerce Website" class="w-full h-56 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold text-lg mb-2">kartu_nama</h3>
+                <p class="text-gray-600 mb-4 text-sm">tantangan yang diberikan asprak ketika di lab </p>
+                <a href="#" class="block w-full text-center bg-gray-900 text-white py-2 rounded-md font-semibold hover:bg-gray-800 transition">Lihat</a>
+              </div>
+            </article>
 
-			<!-- Mobile menu (hidden by default) -->
-					<div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
-						<div class="px-4 pt-4 pb-6 space-y-3">
-							<a href="#" class="block text-gray-700 font-medium">Home</a>
-							<a href="#features" class="block text-gray-700 font-medium">Features</a>
-							<a href="#pricing" class="block text-gray-700 font-medium">Pricing</a>
-							<a href="#contact" class="block text-gray-700 font-medium">Contact</a>
-							<div class="pt-2">
-								<a href="#" class="block w-full text-center px-4 py-2 mb-2 text-gray-700">Sign in</a>
-								<a href="#" class="block w-full text-center px-4 py-2 bg-sky-600 text-white rounded-md">Sign up</a>
-							</div>
-						</div>
-					</div>
-		</header>
+            <article class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+              <img src="assets/image/proyek 2.png" alt="Mobile Banking App" class="w-full h-56 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold text-lg mb-2">kata kata hari ini </h3>
+                <p class="text-gray-600 mb-4 text-sm">tantangan dari asprak </p>
+                <a href="#" class="block w-full text-center bg-gray-900 text-white py-2 rounded-md font-semibold hover:bg-gray-800 transition">Lihat</a>
+              </div>
+            </article>
 
-		<main>
-			<!-- Hero -->
-			<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-					<div>
-						<p class="text-sm font-semibold uppercase text-sky-600">LEARN, BUILD, &amp; SHOWCASE</p>
-						<h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold text-sky-600 leading-tight">ALL IN ONE<br class="hidden md:inline"> PLATFORM</h1>
-						<p class="mt-4 text-lg text-slate-600">apollo adalah advanced programming and online learning laboratory, sebuah platform terpadu yang menggabungkan lms, manajemen proyek, dan portofolio dalam satu ekosistem yang menyatu. di sini kamu bisa belajar keterampilan baru, berkolaborasi dalam proyek nyata, dan menampilkan pencapaianmu, semuanya dalam satu tempat yang terintegrasi dengan mulus.</p>
-						<div class="mt-6 flex flex-wrap gap-3">
-							<a href="#" class="inline-flex items-center px-5 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700">Get Started for Free</a>
-							<a href="#features" class="inline-flex items-center px-5 py-3 bg-white border border-sky-600 text-sky-600 font-semibold rounded-lg hover:bg-sky-50">Explore Features</a>
-						</div>
-					</div>
+            <article class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+              <img src="assets/image/proyek 3.png" alt="Creative Portfolio" class="w-full h-56 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold text-lg mb-2">Creative Portfolio</h3>
+                <p class="text-gray-600 mb-4 text-sm">Portfolio website untuk menampilkan karya desain dengan tampilan yang elegan.</p>
+                <a href="#" class="block w-full text-center bg-gray-900 text-white py-2 rounded-md font-semibold hover:bg-gray-800 transition">Lihat</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-					<div class="flex justify-center md:justify-end">
-						<img src="assets/images/ilustation.jpg" alt="Hero illustration" class="w-full max-w-lg" />
-					</div>
-				</div>
-			</section>
+      <section id="contact" class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-center mb-8">Hubungi Saya</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="flex flex-col items-center text-center">
+              <div class="bg-blue-100 text-blue-600 p-4 rounded-full inline-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-semibold">Email</h3>
+              <p class="text-gray-600"><a class="hover:underline" href="mailto:ahmad.rizki@email.com">Imamfaqih25@Gmail.com</a></p>
+            </div>
 
-			<!-- Features (lilac band with cards) -->
-			<section id="features" class="bg-violet-50">
-				<div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-					<h2 class="text-2xl font-bold text-slate-900 text-center">What You'll Get With Apollo</h2>
-					<p class="mt-2 text-slate-600 text-center">A powerful suite of features designed to help you learn, build, and showcase your work.</p>
+            <div class="flex flex-col items-center text-center">
+              <div class="bg-blue-100 text-blue-600 p-4 rounded-full inline-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.517 4.55a1 1 0 01-.272 1.027l-2.012 2.012a11.042 11.042 0 005.516 5.516l2.012-2.012a1 1 0 011.027-.272l4.55 1.517a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-semibold">Whatsapp</h3>
+              <p class="text-gray-600"><a class="hover:underline" href="https://wa.me/6281234567890">+62 812 3456 7890</a></p>
+            </div>
 
-					<div class="mt-8 flex justify-center">
-						<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl w-full">
-							<article class="bg-white p-8 rounded-xl shadow-lg text-center border border-gray-100">
-								<div class="flex items-center justify-center">
-									<div class="h-12 w-12 rounded-lg bg-sky-50 flex items-center justify-center">
-										<img src="assets/icons/icon-feature1.svg" alt="feature 1" class="h-8 w-8" />
-									</div>
-								</div>
-								<h3 class="mt-4 text-lg font-semibold">Learning Management System</h3>
-								<p class="mt-2 text-sm text-slate-600">Master programming skills with structured modules, interactive lessons, quizzes and coding challenges.</p>
-							</article>
+            <div class="flex flex-col items-center text-center">
+              <div class="bg-blue-100 text-blue-600 p-4 rounded-full inline-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-7.582 8-12A8 8 0 104 10c0 4.418 8 12 8 12z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-semibold">Lokasi</h3>
+              <p class="text-gray-600">yogyakarta, Indonesia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-							<article class="bg-white p-8 rounded-xl shadow-lg text-center border border-gray-100">
-								<div class="flex items-center justify-center">
-									<div class="h-12 w-12 rounded-lg bg-emerald-50 flex items-center justify-center">
-										<img src="assets/icons/icon-feature2.svg" alt="feature 2" class="h-8 w-8" />
-									</div>
-								</div>
-								<h3 class="mt-4 text-lg font-semibold">Project Management</h3>
-								<p class="mt-2 text-sm text-slate-600">Turn your knowledge into real experience. Collaborate with teammates, manage tasks, and track progress.</p>
-							</article>
-
-							<article class="bg-white p-8 rounded-xl shadow-lg text-center border border-gray-100">
-								<div class="flex items-center justify-center">
-									<div class="h-12 w-12 rounded-lg bg-pink-50 flex items-center justify-center">
-										<img src="assets/icons/icon-feature3.svg" alt="feature 3" class="h-8 w-8" />
-									</div>
-								</div>
-								<h3 class="mt-4 text-lg font-semibold">Portfolio Management</h3>
-								<p class="mt-2 text-sm text-slate-600">Showcase your best work in one place. Every project you build in Apollo can be instantly added to your portfolio.</p>
-							</article>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- CTA band -->
-			<section class="bg-sky-50">
-				<div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-					<div class="bg-sky-100 rounded-xl p-10 flex flex-col items-center text-center max-w-4xl mx-auto">
-						<img src="assets/icons/RoketCTA.svg" alt="rocket" class="h-10 w-10 mb-4" />
-						<h3 class="text-xl font-semibold text-slate-900">Ready to Launch Your Journey?</h3>
-						<p class="mt-3 text-slate-600 max-w-2xl">Join Apollo today and experience the all-in-one ecosystem to learn programming, build real projects, and showcase your portfolio.</p>
-						<a href="#" class="mt-6 inline-flex items-center px-6 py-3 bg-sky-600 text-white rounded-lg font-semibold hover:bg-sky-700">Get Started Free</a>
-					</div>
-				</div>
-			</section>
-
-
-
-			<!-- Contact / Footer anchor -->
-			<section id="contact" class="bg-cyan-50">
-				<div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-					<h3 class="text-lg font-semibold">Stay in touch</h3>
-					<p class="mt-2 text-gray-700">Replace this with real contact form or link.</p>
-				</div>
-			</section>
-		</main>
-
-		<footer class="bg-slate-900 text-slate-200">
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-				<div>
-					<div class="flex items-center space-x-3">
-						<img src="assets/icons/logo appolo.svg" alt="APOLLO" class="h-6" />
-					</div>
-					<p class="mt-4 text-sm text-slate-400">Advanced Programming and Online Learning Laboratory</p>
-					<ul class="mt-4 text-sm text-slate-400 space-y-1">
-						<li>📞 +62 1234 5678 901</li>
-						<li>✉️ apollo@apollo.com</li>
-						<li>🏢 Kampus 4 Universitas Ahmad Dahlan</li>
-					</ul>
-				</div>
-
-				<div class="text-sm text-slate-400">
-					<h4 class="font-semibold text-slate-200 mb-2">Quick Links</h4>
-					<ul class="space-y-2">
-						<li>Home</li>
-						<li>Features</li>
-						<li>How it works</li>
-					</ul>
-				</div>
-
-				<div class="text-sm text-slate-400">
-					<h4 class="font-semibold text-slate-200 mb-2">Resources</h4>
-					<ul class="space-y-2">
-						<li>Support</li>
-						<li>Privacy policy</li>
-						<li>Terms of use</li>
-					</ul>
-				</div>
-			</div>
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-800 text-center text-slate-500">© 2025 APOLLO. All rights reserved.</div>
-		</footer>
-
-		<!-- Hamburger menu script (only JS used for mobile toggle) -->
-		<script>
-			const menuBtn = document.getElementById('menu-btn');
-			const mobileMenu = document.getElementById('mobile-menu');
-			const menuOpenIcon = document.getElementById('menu-open');
-			const menuCloseIcon = document.getElementById('menu-close');
-
-			menuBtn.addEventListener('click', () => {
-				const isHidden = mobileMenu.classList.toggle('hidden');
-				
-				const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-				menuBtn.setAttribute('aria-expanded', String(!expanded));
-				
-				menuOpenIcon.classList.toggle('hidden');
-				menuCloseIcon.classList.toggle('hidden');
-			});
-		</script>
-	</body>
+    <footer class="bg-gray-900 text-gray-300 text-center py-6">
+      <p>&copy; 2025 imam faqih masduqi. Semua hak dilindungi.</p>
+    </footer>
+  </body>
 </html>

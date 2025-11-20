@@ -1,0 +1,99 @@
+    body {
+        font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px; /* Padding untuk tampilan mobile */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Memastikan body mengisi seluruh tinggi layar */
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        color: #333;
+        box-sizing: border-box; /* Konsistensi layout */
+    }
+
+    /* 2. Kontainer Utama */
+    .container {
+        text-align: center;
+        max-width: 500px; /* Lebar maksimum konten */
+        width: 100%;
+        /* Center content vertically and horizontally */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 40px); /* memperhitungkan padding body */
+    }
+
+    /* 3. Judul */
+    h1 {
+        font-size: 2rem; /* 32px */
+        font-weight: 700;
+        color: #2a2a2a;
+        margin-bottom: 24px;
+    }
+
+    /* 4. Kartu (Card) */
+    .card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+        text-align: center;
+    }
+
+    /* 5. Teks Fakta */
+    #fact-text {
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.6;
+        color: #444;
+        min-height: 120px; /* Mencegah card "melompat" saat fakta berganti */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 24px;
+        transition: opacity 0.3s ease; /* Efek fade saat ganti teks */
+    }
+
+    /* 6. Tombol (Button) */
+    #new-fact-btn {
+        font-family: 'Inter', sans-serif; /* Memastikan font konsisten */
+        font-weight: 600;
+        font-size: 1rem; /* 16px */
+        color: #ffffff;
+        background: linear-gradient(90deg, #5e72e4 0%, #825ee4 100%);
+        border: none;
+        border-radius: 8px;
+        padding: 14px 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex; /* Agar icon dan teks sejajar */
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Jarak antara icon dan teks */
+        box-shadow: 0 4px 10px rgba(94, 114, 228, 0.3);
+    }
+
+    /* 7. Efek Hover & Active pada Tombol */
+    #new-fact-btn:hover {
+        transform: translateY(-2px); /* Efek sedikit terangkat */
+        box-shadow: 0 6px 15px rgba(94, 114, 228, 0.4);
+    }
+
+    #new-fact-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(94, 114, 228, 0.3);
+    }
+
+    /* 8. Styling Icon SVG */
+    #new-fact-btn svg {
+        stroke: #ffffff;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* 9. Kelas 'loading' untuk animasi */
+    #fact-text.loading {
+        opacity: 0.5;
+    }
+    
